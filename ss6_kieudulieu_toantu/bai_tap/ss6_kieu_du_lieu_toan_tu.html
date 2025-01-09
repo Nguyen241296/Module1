@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm Trung Bình Của Sinh Viên</title>
+</head>
+<h1 style="margin-left: 60px">Điểm Trung Bình Của Sinh Viên</h1>
+
+<body>
+<span>Toán</span>
+<input type="number" id="toan">
+<span>Lý</span>
+<input type="number" id="ly">
+<span>Hoá</span>
+<input type="number" id="hoa">
+<button onclick="tinhDiem()">Gửi</button>
+<br>
+<!--<p id="ketQua"></p>-->
+<p id="tongKet">Điểm Tổng Kết</p>
+<script>
+    function tinhDiem() {
+        let diemToan = +document.getElementById("toan").value;
+        let diemLy = +document.getElementById("ly").value;
+        let diemHoa = +document.getElementById("hoa").value;
+        let diemTongKet = (diemToan + diemLy + diemHoa) / 3;
+        document.getElementById("tongKet").innerText =diemTongKet
+        // document.getElementById("tongKet").innerText = diemTongKet
+    }
+</script>
+</body>
+</html>

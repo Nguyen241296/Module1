@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<h1 style="margin-left: 60px">Ứng dụng máy tính</h1>
+<body>
+<form>
+  <input type="number" placeholder="Nhập số liệu" id="so1">
+  <input type="number" placeholder="Nhập số liệu" id="so2">
+  <button type="button" onclick="cong()">Cộng</button>
+  <button type="button" onclick="tru()">Trừ</button>
+  <button type="button" onclick="nhan()">Nhân</button>
+  <button type="button" onclick="chia()">Chia</button><br>
+  <button type="reset">Xoá</button>
+</form>
+<p id="ketQua">Kết quả</p>
+<script>
+  let duLieu1 =document.getElementById("so1")
+  let duLieu2 =document.getElementById("so2")
+  function cong() {
+    let phepCong = (parseFloat(duLieu1.value)+parseFloat(duLieu2.value));
+    document.getElementById("ketQua").innerText = "="+ phepCong
+
+  }
+  function tru() {
+    let phepTru =(parseFloat(duLieu1.value)-parseFloat(duLieu2.value));
+    document.getElementById("ketQua").innerText ="="+ phepTru
+    
+  }
+  function nhan() {
+    let phepNhan =(parseFloat(duLieu1.value)*parseFloat(duLieu2.value));
+    document.getElementById("ketQua").innerText ="="+ phepNhan
+
+  }
+  function chia() {
+    let phepChia =(parseFloat(duLieu1.value)/parseFloat(duLieu2.value));
+    document.getElementById("ketQua").innerText ="="+ phepChia
+    
+  }
+</script>
+
+</body>
+</html>
